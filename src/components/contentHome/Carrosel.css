@@ -1,0 +1,86 @@
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Permite que o conteúdo se empilhe em telas menores */
+}
+
+.pai {
+    width: 80%; /* Ajusta a largura do contêiner principal */
+    max-width: 800px; /* Limita a largura máxima */
+}
+
+.car-info {
+    width: 100%; /* Faz o carrossel ocupar toda a largura do contêiner pai */
+    border-radius: 15px; /* Bordas arredondadas */
+    position: relative; /* Para posicionamento absoluto dos botões */
+    overflow: hidden; /* Mantém o conteúdo dentro dos limites */
+}
+
+.car-image {
+    width: 100%; /* Largura total do contêiner */
+    height: 400px; /* Altura fixa, ajuste conforme necessário */
+    object-fit: cover; /* Mantém a proporção da imagem e cobre a área */
+    display: block;
+    transition: opacity 0.5s ease; /* Suaviza a transição entre as imagens */
+}
+
+button {
+    position: absolute; /* Para posicionar os botões dentro do carrossel */
+    top: 50%; /* Centraliza verticalmente */
+    color: white;
+    background-color: #f00000; /* Fundo vermelho */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+    padding: 10px 15px; /* Adiciona algum espaço ao redor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease, transform 0.2s; /* Suaviza a transição de fundo e escala */
+}
+
+button:hover {
+    background-color: #d00000; /* Muda o fundo para um vermelho mais escuro ao passar o mouse */
+    color: white; /* Muda a cor do texto para branco */
+    transform: scale(1.1); /* Aumenta o botão em 10% */
+}
+
+button.leftMod {
+    background-color: rgba(0, 0, 0, 0.300);
+    padding-bottom: 13px;
+    font-size: 200%;
+    left: 10px; /* Distância da borda esquerda */
+}
+
+button.rightMod {
+    background-color: rgba(0, 0, 0, 0.300);
+    padding-bottom: 13px;
+    font-size: 200%;
+    right: 10px; /* Distância da borda direita */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 600px) {
+    .car-image {
+        height: 300px; /* Ajusta a altura em telas menores */
+    }
+
+    button {
+        padding: 8px 12px; /* Ajusta o padding dos botões */
+        font-size: 14px; /* Diminui o tamanho da fonte dos botões */
+    }
+}
+
+@media (max-width: 400px) {
+    .pai {
+        width: 90%; /* Aumenta a largura do contêiner pai em telas muito pequenas */
+    }
+
+    .car-image {
+        height: 250px; /* Ajusta ainda mais a altura em telas pequenas */
+    }
+
+    button {
+        padding: 6px 10px; /* Menor padding em telas pequenas */
+        font-size: 12px; /* Diminui ainda mais o tamanho da fonte */
+    }
+}

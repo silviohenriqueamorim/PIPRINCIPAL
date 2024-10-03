@@ -1,0 +1,213 @@
+/* src/components/ProfilePage.css */
+
+.section-content {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+};
+
+.secao{
+  color: #96b5cf;
+  display: flex;
+  justify-content: center;
+}
+
+
+.buton {
+  text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid;
+    background-color: transparent;
+    transition: border-color 0.3s, color 0.3s, transform 0.2s;
+  }
+  
+  .buton.show-purchase {
+    border-color: #4CAF50; 
+    color: #4CAF50;
+  }
+  
+  .buton.edit-profile {
+    border-color: #2196F3;
+    color: #2196F3;
+  }
+  
+  .buton.show-sales {
+    border-color: #FFC107;
+    color: #FFC107;
+  }
+  
+  .buton:hover {
+    border-color: #333; 
+    color: #333;
+    transform: scale(1.05);
+  }
+  
+  .buton:focus {
+    outline: 2px solid red;
+    outline-offset: 2px;
+  }
+  
+
+  
+
+  .profile-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 10px;
+  padding: 10px;
+}
+
+.form-control {
+    width: 100%; 
+}
+
+.text-center {
+    text-align: center; 
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none; 
+}
+
+  .login-container{
+  
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.content {
+ 
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.content h2 {
+  color: #333;
+  font-weight: bold;
+}
+
+.nome-site{
+  padding-top: 1vh;
+  position: absolute;
+  top: 15px;
+  font-size: 26px;
+  color: #333;
+}
+
+
+.logo {
+  width: 20vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 1000px) {
+  .logo {
+    width: 15vw;
+  }
+}
+@media (min-width: 1500px) {
+  .logo {
+    width: 10vw;
+  }
+}
+
+
+.content input {
+  border-radius: 9px 9px 0px 0px;
+  width: 100%;
+  padding: 5px 0;
+  margin: 0px 0;
+  border: none;
+  border-bottom: 2px solid #525252;
+  font-size: 18px;
+  margin-bottom: 1vh;
+}
+.dataInput{
+  color:#707070;
+}
+input:focus {
+  border-color: #546980;
+  background-color: #f8f8f8; 
+  outline: none; 
+}
+#exTel{
+display: flex;
+padding-left: 0;
+text-align: left;
+justify-content: left;
+align-items: center;
+}
+
+
+p{color: #727272;; width: 100%; height: 28px;}
+
+
+#mostrarSenha{
+  margin-top: 15px;
+  
+}
+
+
+.login-button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 18px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: darkred;
+}
+
+  }
+
+.button {
+
+  display: flex;
+    justify-content: center;
+}
+
+.text{
+  text-align: center;
+}
+
+.login-container{
+  display: flex;
+    justify-content: center;
+}
+

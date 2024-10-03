@@ -1,0 +1,58 @@
+/* Estilo básico da container */
+.container {
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox para layout responsivo */
+.dados {
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px; 
+    flex-wrap: wrap;
+}
+
+
+.perfil-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+.perfil {
+    max-width: 50%;
+    height: auto;
+    padding: 10px;
+}
+
+.userInfo {
+    flex: 2;
+    text-align: left;
+}
+
+
+.hr {
+    border: 0;
+    border-top: 1px solid #000000;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .dados {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .perfil-container, .userInfo {
+        flex: 1 1 100%;
+        text-align: center; 
+    }
+
+    .perfil {
+        max-width: 80%; 
+    }
+}

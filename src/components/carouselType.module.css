@@ -1,0 +1,81 @@
+.carouselContainer {
+  position: relative; 
+  width: 90%;
+  overflow: hidden; 
+  border-radius: 8px; 
+}
+
+.carouselWrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Animação de mover as imagens */
+}
+
+.carouselImage {
+  border-radius: 10px 10px 10px 10px;
+  margin: 0px 5% 0 0;
+  height: 100%; 
+  width: 30%;
+  object-fit: cover; 
+}
+
+@media (max-width:1190px) and (min-width:992px){
+  
+  .carouselContainer{
+    width: 899px;
+  }
+  .carouselImage {
+    margin: 0px 2% 0 0;
+    height: 166px; 
+    width: 30%;
+    object-fit: cover; 
+  }
+}
+@media (max-width:1536px) and (min-width:1189px){
+  .carouselContainer{
+    width: 973px;
+  }
+  .carouselImage {
+    margin: 0px 2% 0 0;
+    height: 180px; 
+    width: 30%;
+    object-fit: cover; 
+  }
+}
+@media(min-width:1537px){
+  .carouselContainer{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width:  1166px;
+  }
+  .carouselImage {
+    margin: 0px 2% 0 0;
+    height: 100%; 
+    width: 30%;
+    object-fit: cover; 
+  }
+}
+
+.carouselButton {
+  position: absolute; 
+  top: 40%; 
+  background-color: rgba(0, 0, 0, 0.308); 
+  border: none; 
+  padding: 10px 6px 8px 6px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+  z-index: 1; /* Botão acima do conteúdo do carrossel */
+}
+
+.carouselButton:hover {
+  background-color: rgba(0, 0, 0, 0.521); 
+}
+
+.prevButton {
+  scale: -1;
+  left: 10px; 
+}
+
+.nextButton {
+  right: 10px;
+}
