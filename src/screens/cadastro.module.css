@@ -1,0 +1,112 @@
+/* cadastro.module.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginHeader {
+  padding-top: 10px;
+  position: absolute;
+  top: 0%;
+  width: 100vw;
+  align-items: center;
+}
+
+.content {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.content h2 {
+  color: #333;
+  font-weight: bold;
+}
+
+.logo {
+  width: 20vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content input {
+  border-radius: 3px 3px 0px 0px;
+  width: 100%;
+  padding: 5px 0;
+  margin: 0px 0;
+  border: none;
+  border-bottom: 2px solid #525252;
+  background-color: #ffffff49;
+  font-size: 18px;
+  margin-bottom: 1vh;
+}
+
+input:focus {
+  border-bottom: 2px #62779f solid;
+  background-color: rgba(255, 255, 255, 0.597);
+  outline: none;
+}
+
+.loginButton {
+  margin-top: 30px;
+  width: 100%;
+  padding: 18px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.loginButton:hover {
+  background-color: rgba(255, 0, 0, 0.631); /* Ajuste para uma cor mais clara */
+}
+
+
+.signupLink {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.signupLink a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signupLink a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 1000px) {
+  .logo {
+    width: 15vw;
+  }
+}
+@media (min-width: 1500px) {
+  .logo {
+    width: 10vw;
+  }
+}

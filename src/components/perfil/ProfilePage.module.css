@@ -1,0 +1,107 @@
+.container {
+  margin-top: 2rem;
+}
+
+.text {
+  text-align: center;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  text-align: center;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid;
+  background-color: transparent;
+  transition: border-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.button.editProfile {
+  color: red;
+}
+
+.button:hover {
+  border-color: #333;
+  color: #333;
+  transform: scale(1.05);
+}
+
+.button:focus {
+  outline: 2px solid red;
+  outline-offset: 2px;
+}
+
+.sectionContent {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.content h2 {
+  color: #333;
+  font-weight: bold;
+}
+
+.content input {
+  border-radius: 9px 9px 0px 0px;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  border: 2px solid #525252;
+  font-size: 18px;
+  margin-bottom: 1vh;
+}
+
+.content input:focus {
+  border-color: #546980;
+  background-color: #f8f8f8;
+  outline: none;
+}
+
+.dataInput {
+  color: #707070;
+}
+
+#mostrarSenha {
+  margin-top: 15px;
+}
+
+.loginButton {
+  margin-top: 30px;
+  width: 100%;
+  padding: 18px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.loginButton:hover {
+  background-color: darkred;
+}

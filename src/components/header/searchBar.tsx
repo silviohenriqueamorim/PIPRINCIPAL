@@ -1,40 +1,41 @@
-import './searchBar.css'; // Importa o CSS específico para este componente
+import React, { useEffect, useRef } from 'react';
+import './searchBar.css';
 
-const SearchBar = () => {
-  const [inputValue, setInputValue] = useState('');
-  const [isFocused, setIsFocused] = useState(false);
-  const recentSearches = ['Pesquisa 1', 'Pesquisa 2', 'Pesquisa 3']; // Exemplo de pesquisas recentes
+interface SearchBarProps {
+  onPositionChange: (x: number, y: number, width: number) => void;
+  onFocusChange: (isFocused: boolean) => void; // Novo prop para o foco
+}
 
-  const handleSearchClick = (search) => {
-    setInputValue(search); // Preenche o input com a pesquisa clicada
-    setIsFocused(false); // Fecha a lista de sugestões
-  };
+const SearchBar: React.FC<SearchBarProps> = ({ onPositionChange, onFocusChange }) => {
+  const searchBarRef = useRef<HTMLFormElement | null>(null);
+
+  useEffect(() => {
+    const updatePositionAndWidth = () => {
+        if (searchBarRef.current) {
+            const rect = searchBarRef.current.getBoundingClientRect();
+            onPositionChange(rect.x, rect.y, rect.width);
+        }
+    };
+
+    updatePositionAndWidth();
+    window.addEventListener('resize', updatePositionAndWidth);
+
+    return () => {
+        window.removeEventListener('resize', updatePositionAndWidth);
+    };
+}, [onPositionChange]);
+
+
   return (
-    <div>
-    <form className="form-inline ml-auto flex-grow-1 scroll-container formi" style={{ paddingLeft: "10px" }}>
-      <input className="searchBar form-control w-100" 
-      type="text"
-        onChange={(e) => setInputValue(e.target.value)}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)} // Você pode gerenciar o estado do foco de forma diferente
-        placeholder="Pesquisar..." />
+    <form
+      className="form-inline ml-auto flex-grow-1 scroll-container formi"
+      style={{ paddingLeft: "10px" }}
+      ref={searchBarRef}
+      onFocus={() => onFocusChange(true)} // Define o foco como verdadeiro
+      onBlur={() => onFocusChange(false)} // Define o foco como falso
+    >
+      <input className="searchBar form-control w-100" type="text" placeholder="Search" id='searchBar'/>
     </form>
-      {isFocused && (
-        <div className="recent-searches">
-          {recentSearches
-            .filter(search => search.toLowerCase().includes(inputValue.toLowerCase())) // Filtra sugestões
-            .map((search, index) => (
-              <div
-                key={index}
-                className="search-item"
-                onMouseDown={() => handleSearchClick(search)} // Usa onMouseDown para evitar perda de foco
-              >
-                {search}
-              </div>
-            ))}
-        </div>
-      )}
-    </div>
   );
 };
 

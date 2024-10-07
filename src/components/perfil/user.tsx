@@ -1,8 +1,7 @@
 import React from 'react';
-import './user.css';
+import Styles from './user.module.css'; // Importa o CSS Module
 import perfil from '../../assets/perfil1.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 const User: React.FC = () => {
   
@@ -15,24 +14,24 @@ const User: React.FC = () => {
     };
 
     return (
-        <div className="container">
-            <div className="dados">
-                <div className="perfil-container">
-                <img src={perfil} alt="perfil" className='perfil'/>
+        <div className={Styles.container}>
+            <div className={Styles.dados}>
+                <div className={Styles.perfilContainer}>
+                    <img src={perfil} alt="perfil" className={Styles.perfil} />
                 </div>
-                <div className="userInfo">
+                <div className={Styles.userInfo}>
                     <h2>{Usuario.name}</h2>
                     <p><strong>Data de Nascimento:</strong> {Usuario.nascimento}</p>
-                    <hr className="hr"/>
+                    <hr className={Styles.hr} />
 
                     <p><strong>CPF:</strong> {Usuario.cpf}</p>
-                    <hr className="hr"/>
+                    <hr className={Styles.hr} />
 
                     <p><strong>Email:</strong> {Usuario.email}</p>
-                    <hr className="hr"/>
+                    <hr className={Styles.hr} />
 
                     <p><strong>Telefone:</strong> {Usuario.telefone}</p>
-                    <hr className="hr"/>
+                    <hr className={Styles.hr} />
                 </div>
             </div>
         </div>

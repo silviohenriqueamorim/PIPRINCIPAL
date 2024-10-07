@@ -1,0 +1,35 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 2px 10px;
+    height: 160px;
+    display: flex;
+}
+
+.buttonRegras {
+    padding: 10px 20px;
+    display: inline-block;
+    padding: 18px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+}
+
+  .card-image {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin: 16px 0 8px;
+  }
+  
+  .card-description {
+    font-size: 1rem;
+    color: #555;
+  }
+  

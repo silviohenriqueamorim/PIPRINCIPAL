@@ -1,0 +1,6 @@
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    padding: 20px; /* Adiciona um pouco de espaço ao redor */
+}

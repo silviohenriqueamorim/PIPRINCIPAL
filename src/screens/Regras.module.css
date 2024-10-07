@@ -1,0 +1,47 @@
+.regrasContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 50%;
+}
+
+.containerRegras {
+  flex: 1;
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 90px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 1rem;
+  color: #ff0000;
+  padding: 20px;
+}
+
+.text {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.subtitle {
+  margin-bottom: 1.5rem;
+  color: black;
+  display: flex;
+  padding: 20px;
+}
+
+footer {
+  background-color: #ff0000;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}

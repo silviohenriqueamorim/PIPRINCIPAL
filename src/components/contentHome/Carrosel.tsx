@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Carrosel.css';
+import Styles from './Carrosel.module.css';
 import carro1 from "../../assets/carro1.jpg";
 import carro3 from "../../assets/carro1.png";
 
@@ -17,21 +17,21 @@ const CarrosselMod: React.FC = () => {
     };
 
     return (
-        <main className="main-content">
-            <div className='pai'>
+        <main className={Styles.mainContent}>
+            <div className={Styles.pai}>
                 <div>
                     <h1>Modelos mais Procurados</h1>
                 </div>
-            <section className="car-info">
-                <img
-                    src={images[currentIndex]}
-                    alt="Imagem de um carro moderno em um ambiente urbano"
-                    className="car-image"
+                <section className={Styles.carInfo}>
+                    <img
+                        src={images[currentIndex]}
+                        alt="Imagem de um carro moderno em um ambiente urbano"
+                        className={Styles.carImage}
                     />
-                <button className="leftMod" onClick={prevImage}>‹</button>
-                <button className="rightMod" onClick={nextImage}>›</button>
-            </section>
-        </div>
+                    <button className={`${Styles.leftMod} ${Styles.button}`} onClick={prevImage}>‹</button>
+                    <button className={`${Styles.rightMod} ${Styles.button}`} onClick={nextImage}>›</button>
+                </section>
+            </div>
         </main>
     );
 };
