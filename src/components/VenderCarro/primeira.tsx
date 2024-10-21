@@ -1,10 +1,26 @@
 import React from 'react';
 import './primeira.css'; // Importe o CSS correspondente
 import { Link } from 'react-router-dom';
+import Header from '../header/Header';
+
 
 const LocalizacaoCarro: React.FC = () => {
+
+  const [recentesPosition, setRecentesPosition] = useState({ x: 0, y: 0, width: 0 });
+    const [isSearchFocused, setIsSearchFocused] = useState(false);
+
+    const recentesArray = ['Item 1', 'Item 2', 'Item 3'];
+
+    const handlePositionChange = (x: number, y: number, width: number) => {
+        setRecentesPosition({ x, y, width });
+
   return (
     <div className="localizacao-container">
+      {/* copiar Header e Recentes */}
+      <Header 
+                onPositionChange={handlePositionChange} 
+                onFocusChange={setIsSearchFocused}
+            />
       <h1 className="titulo-pagina">Primeira Etapa</h1>
       <p className="subtitulo">Onde se localiza o Carro?</p>
       <form className="form-localizacao">
@@ -25,6 +41,8 @@ const LocalizacaoCarro: React.FC = () => {
       </Link>
 
       </form>
+      {/* RECENTES DO HEADER */}
+      {isSearchFocused && <Recentes position={recentesPosition} recentes={recentesArray} onSelect={handleSelectRecent} />}
     </div>
   );
 };
