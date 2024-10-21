@@ -1,12 +1,15 @@
 .container {
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 
-.text {
-  text-align: center;
+.sectionContent {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
 }
 
-.buttonContainer {
+.buttonGroup {
   display: flex;
   justify-content: center;
 }
@@ -19,18 +22,34 @@
   margin: 10px;
   font-weight: bold;
   border-radius: 5px;
-  border: 2px solid;
+  border: 2px solid transparent;
   background-color: transparent;
   transition: border-color 0.3s, color 0.3s, transform 0.2s;
 }
 
-.button.editProfile {
-  color: red;
+.showPurchase {
+  border-color: red;
+  color: white;
+  background-color: red;
+  box-shadow: inset;
+}
+
+.editProfile {
+  border-color: red;
+  color: white;
+  background-color: red;
+  box-shadow: inset;
+}
+
+.showSales {
+  border-color: red;
+  color: white;
+  background-color: red;
+  box-shadow: inset;
 }
 
 .button:hover {
-  border-color: #333;
-  color: #333;
+  color: white;
   transform: scale(1.05);
 }
 
@@ -39,21 +58,13 @@
   outline-offset: 2px;
 }
 
-.sectionContent {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-}
-
 .loginContainer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content {
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100%;
   max-width: 600px;
   padding: 40px;
@@ -69,24 +80,14 @@
 .content input {
   border-radius: 9px 9px 0px 0px;
   width: 100%;
-  padding: 10px;
-  margin: 0;
-  border: 2px solid #525252;
-  font-size: 18px;
+  padding: 5px 0;
   margin-bottom: 1vh;
+  border: none;
+  border-bottom: 2px solid #525252;
+  font-size: 18px;
 }
 
-.content input:focus {
-  border-color: #546980;
-  background-color: #f8f8f8;
-  outline: none;
-}
-
-.dataInput {
-  color: #707070;
-}
-
-#mostrarSenha {
+.showPassword {
   margin-top: 15px;
 }
 
@@ -104,4 +105,34 @@
 
 .loginButton:hover {
   background-color: darkred;
+}
+
+.sales,
+.purchases {
+  text-align: center;
+}
+
+.carros {
+  margin: 20px 0;
+}
+
+.text {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 1000px) {
+  .logo {
+    width: 15vw;
+  }
+}
+@media (min-width: 1500px) {
+  .logo {
+    width: 10vw;
+  }
+}
+@media (min-width: 768px) {
+  text {
+      font-size: 3rem; /* Tamanho maior em telas maiores */
+  }
 }

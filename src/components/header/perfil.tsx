@@ -1,22 +1,25 @@
-import React from 'react';
 import perfilImage from '../../assets/perfil1.png'; // Substitua pelo caminho para a sua imagem de perfil
-import './perfil.css'; // Arquivo CSS para estilizar o perfil, se necessário
+import sty from './perfil.module.css'; // Arquivo CSS para estilizar o perfil, se necessário
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
+
 const Perfil = () => {
   return (
-    <div className='containerr'>
-      <div className='foto'>
+    <div className={`containerr ${sty.containerr}`}>
+      <div className={`foto ${sty.foto}`}>
         <img
         src={perfilImage}
         alt="perfil"
-        className="perfil-image"
+        className={`perfilImage ${sty.perfilImage}`}
         />
       </div>
-      <div className='texto'>
+      <div  className={`texto ${sty.texto}`}>
         <div>Usuário</div>
         <div>ver perfil</div>
+      </div>
+      <div  className={`textinho ${sty.textinho}`}>
+        <div>Usuário</div>
       </div>
     </div>
   );

@@ -1,0 +1,111 @@
+/* src/components/cardCompra.module.css */
+
+.card {
+    display: flex;
+    flex-direction: column; /* Alinhamento vertical */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 600px; /* Reduzido para caber mais cards lado a lado */
+    margin: 8px; /* Reduzido para menor espaçamento */
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    flex: 1 1 200px; /* Permite que os cards se ajustem */
+    flex-direction: row; /* Muda para alinhamento horizontal */
+}
+
+.cardImage {
+    width: 320px; /* Largura fixa da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column; /* Alinhamento vertical das informações */
+    justify-content: space-between;
+    padding: 12px; /* Ajustado para menor padding */
+    background-color: #f9f9f9;
+}
+
+.cardBrand {
+    font-size: 1.1em; /* Tamanho da fonte ajustado */
+    margin: 0;
+    color: #333;
+}
+
+.cardModel {
+    font-size: 0.9em; /* Tamanho da fonte ajustado */
+    color: #555;
+    margin: 0;
+}
+
+.cardDetails {
+    padding: 12px; /* Ajustado para menor padding */
+    background-color: #fff;
+}
+
+.cardDescription {
+    margin: 0 0 8px 0;
+    color: #333;
+}
+
+.cardYear {
+    font-size: 0.8em; /* Tamanho da fonte ajustado */
+    color: #888;
+}
+
+.cardList {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards se ajustem em várias linhas */
+    justify-content: space-around; /* Espaça os cards */
+    gap: 0px; /* Espaçamento entre os cards */
+}
+
+.atualizar {
+    margin-top: 20px; /* Reduzido para menor espaçamento */
+    width: 100%;
+    padding: 10px; /* Ajustado para menor padding */
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px; /* Tamanho da fonte ajustado */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Suaviza a transição ao passar o mouse */
+}
+
+.atualizar:hover {
+    background-color: darkred;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column; /* Muda para alinhamento vertical em telas menores */
+        max-width: 100%; /* Para telas menores, ocupa 100% da largura */
+        flex: 1 1 100%; /* Permite que os cards se estendam */
+    }
+
+    .cardImage {
+        width: 100%; /* A imagem ocupa 100% da largura do cartão */
+    }
+}
+
+@media (max-width: 480px) {
+    .cardBrand {
+        font-size: 1em; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    .cardModel {
+        font-size: 0.8em; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    .cardPrice {
+        font-size: 0.8em; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    .atualizar {
+        padding: 12px; /* Ajusta o padding do botão em telas menores */
+    }
+}

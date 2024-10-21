@@ -4,7 +4,7 @@ import User from '../components/perfil/user';
 import ProfilePage from '../components/perfil/ProfilePage';
 import Header from '../components/header/Header';
 import Recentes from '../components/header/recentes';
-import Sty from './home.module.css';
+import Sty from './perfil.module.css';
 
 
 

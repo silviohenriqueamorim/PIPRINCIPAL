@@ -1,0 +1,194 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Aba de Navegação */
+.tab-navigation {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  color: #666;
+  flex: 1;
+  text-align: center;
+}
+
+.tab-button.active {
+  color: #FF0000;
+  border-bottom: 2px solid #FF0000;
+}
+
+/* Seção de Imagem */
+.car-image {
+  margin-bottom: 20px;
+}
+
+.car-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Carrossel de Imagens */
+.slick-slider {
+  width: 100%;
+}
+
+.slick-slide img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.details-section {
+  margin-top: 20px;
+}
+
+.details-section h3 {
+  color: #333;
+  border-bottom: 2px solid #FF0000;
+  padding-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.details-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.details-column {
+  flex: 1;
+  min-width: 250px;
+  margin: 0 15px;
+}
+
+.details p {
+  color: #333;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+/* Botões */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.buy-button,
+.call-button,
+.message-button {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex: 1;
+  text-align: center;
+}
+
+.buy-button {
+  background-color: #FF0000;
+}
+
+.buy-button:hover {
+  background-color: #e60000;
+}
+
+.call-button {
+  background-color: #000000;
+}
+
+.call-button:hover {
+  background-color: #333;
+}
+
+.message-button {
+  background-color: #FF0000;
+}
+
+.message-button:hover {
+  background-color: #e60000;
+}
+
+/* Animações de transição */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+/* Responsividade */
+
+/* Modo desktop - 4 imagens por linha */
+@media (min-width: 769px) {
+  .slick-slide {
+    width: 25%; /* 4 imagens por linha */
+  }
+}
+
+/* Modo carrossel - telas menores */
+@media (max-width: 768px) {
+  .car-image {
+    flex-direction: column;
+  }
+
+  .slick-slide {
+    width: 100%; /* Uma imagem por linha, deslizando como carrossel */
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .details-columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .details-column {
+    margin: 0;
+  }
+}

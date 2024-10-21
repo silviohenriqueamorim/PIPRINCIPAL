@@ -2,7 +2,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   height: 100px;
-  width: 100%;
+  width: 93%;
 }
 
 .card{
@@ -24,7 +24,7 @@
 
 @media (min-width:1537px){
   .carousel{
-    width: 1200px;
+    width: 1190px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 65px;
@@ -42,7 +42,7 @@
 @media (max-width:1536px) and (min-width:1189px){
   .carousel{
     margin-bottom: 45px;
-    width: 87%;
+    width: 900px;
   }
   
   .card{

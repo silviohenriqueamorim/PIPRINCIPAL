@@ -16,7 +16,7 @@
     transition: padding-right 0.3s ease; /* Suaviza a transição do padding */
   }
   
-@media (max-width: 490px) {
+@media (max-width: 490px) and (max-width: 320px) {
   .searchBar{
     height: 30px;
     min-width: none;
@@ -25,6 +25,14 @@
   .formi {
     min-width: none;
     padding: 0 10px;
+  }
+}
+@media (max-width: 320px) {
+  .searchBar{
+    margin-left: 5px;
+  margin-top: 6px;
+   width: 185px;
+   min-width: none;
   }
 }
 

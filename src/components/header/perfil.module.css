@@ -1,43 +1,44 @@
-.perfil-image2 {
+.perfilImage {
   height: 40px; /* Ajuste a altura do logo conforme necessário */
   width: auto; /* Mantém a proporção do logo */
+  margin:  0 ;
 }
-.containerr2{
-  width: 50px;
+.containerr{
   user-select: none;
   border-radius: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-  flex-direction: column;
-  justify-content: center;
+  display: flex;
 }
-.containerr2:hover{
+.containerr:hover{
   transform: scale(1.05);
-  padding-left: 0;
-  box-shadow: 0 0 8px rgba(141, 137, 173, 0.473); /* Configura o box-shadow */
+  padding-left: 0;box-shadow: 0 0 8px rgba(141, 137, 173, 0.473); /* Configura o box-shadow */
   transition: border-color 0.5s ease, box-shadow 0.5s ease; /* Transição suave para a borda e sombra */
 }
-.containerr2:active {
+.containerr:active {
   background-color: rgb(240, 240, 240); /* Cor de fundo quando clicado */
   box-shadow: none; /* Remove o box-shadow ao clicar */
   transform: scale(0.98); /* Reduz o tamanho do botão para um efeito de "pressionado" */
 }
 
-  .texto2{
+  .texto{
+    padding-left: 5px;
     color: rgb(73, 73, 73);
     font-weight: 500;
-    font-size: 80%;
     margin: 0;
     line-height: 19px;
+
   }
-  .foto2{
-    margin: auto;
+  .foto{
+    margin: 0;
     padding: 0%;
   }
-  
-@media (max-width: 490px) {
-  .containerr2{
-    scale: 0.7;
+  .textinho{
+    font-size: 70%;
   }
-
-}
+  @media (max-width: 320px) {
+    .containerr{
+      margin-right: 5px;
+    }
+  }
+  

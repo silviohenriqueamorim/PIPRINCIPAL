@@ -1,0 +1,96 @@
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginContainer h2 {
+    color: #333;
+    font-weight: bold;
+}
+
+.fullWidth {
+    width: 100%; /* Largura total */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid #525252;
+    font-size: 18px;
+}
+
+.halfWidth {
+    width: 48%; 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid #525252;
+    font-size: 18px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.passwordContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.confirmPasswordContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.showPassword {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.loginButton {
+    margin-top: 30px;
+    width: 100%;
+    padding: 18px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.loginButton:hover {
+    background-color: darkred;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between; /* Para alinhar os botões */
+    margin-top: 30px; /* Aumentar o espaço superior */
+}
+
+.deleteButton {
+    background: red;
+    border: 2px solid red; /* Borda vermelha ao redor do botão */
+    border-radius: 5px; /* Arredondar os cantos da borda */
+    cursor: pointer;
+    margin-right: 10px; /* Espaçamento entre os botões */
+    display: flex; /* Para centralizar o ícone */
+    align-items: center; /* Centralizar verticalmente */
+    height: 40px;
+    width: 40px;
+}
+
+.deleteButton svg {
+    width: 50px; /* Tamanho do ícone */
+    height: 24px;
+    fill: white; /* Cor do ícone */
+    transition: fill 0.3s;
+}
+
+.deleteButton:hover svg {
+    fill: darkred; /* Cor ao passar o mouse */
+}

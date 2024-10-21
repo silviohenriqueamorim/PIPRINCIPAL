@@ -1,0 +1,25 @@
+.menu {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bars {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+}
+
+.svgButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px; /* Espaçamento entre as barras e o botão SVG */
+}
+
+.svgButton svg {
+  width: 24px;
+  height: 24px;
+  color: black; /* Cor do ícone */
+}

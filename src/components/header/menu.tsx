@@ -1,31 +1,29 @@
-import { useState } from 'react';
-import perfilImage from '../../assets/perfil1.png'; // Substitua pelo caminho para a sua imagem de perfil
-import './menu.css'; // Arquivo CSS para estilizar o perfil, se necessário
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import React from 'react';
+import styles from './menu.module.css';
 
-const Menu = () => {
-  const [isActive, setIsActive] = useState(false);
+interface MenuProps {
+  onClick: () => void; // Prop para lidar com o clique
+}
 
-  const handleClick = () => {
-    setIsActive(!isActive);
-  };
-
+const Menu: React.FC<MenuProps> = ({ onClick }) => {
   return (
-    <div className={`menu-icon ${isActive ? 'active' : ''}`} onClick={handleClick}>
-      
-    <div className='containerr2'>
-      <div className='foto2'>
-        <img style={{padding:"0 0 0 4px"}}
-        src={perfilImage}
-        alt="perfil2"
-        className="perfil-image2"
-        />
-      </div>
-      <div className='texto2'>
-        <div style={{textAlign:"center", width:"100%"}}>Usuário</div>
-      </div>
-    </div>
+    <div onClick={onClick} className={styles.menu}>
+      {/* Botão SVG */}
+      <button className={styles.svgButton} onClick={onClick} aria-label="Menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+      </button>
     </div>
   );
 };

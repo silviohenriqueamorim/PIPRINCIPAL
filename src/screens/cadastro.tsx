@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './cadastro.module.css'; // Importa o CSS Module
+import styles from './cadastro.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import backImage from '../assets/back.png';
 import myImage from '../assets/logo.png';

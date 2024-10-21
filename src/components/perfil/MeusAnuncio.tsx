@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './cardCompra.module.css';
+import styles from './MeusAnuncio.module.css';
 import MeuAnuncio from '../../assets/MeuAnuncio.jpg'
 
 interface Car {
@@ -25,7 +25,7 @@ const CardList: React.FC<CardListProps> = ({ cars }) => {
                         <h3 className={styles.cardModel}>{veiculo.modelo}</h3>
                         <p className={styles.cardPrice}>{veiculo.preco}</p> {/* Exibindo o preço */}
                         <p className={styles.cardDescription}>{veiculo.descricao}</p>
-                        <a href="Compras"><button className={styles.atualizar}>Detalhes do Anuncio</button></a> {/* Alterando o texto do botão */}
+                        <a href="AtualizarCarro"><button className={styles.atualizar}>Atualizar Dados Do Veículo</button></a> {/* Alterando o texto do botão */}
                     </div>
                 </div>
             ))}

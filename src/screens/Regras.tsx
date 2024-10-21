@@ -1,10 +1,34 @@
+import Recentes from '../components/header/recentes';
+import { useState } from 'react';
 import styles from './Regras.module.css';
+import Header from '../components/header/Header';
 
 function Regras() {
+  const [recentesPosition, setRecentesPosition] = useState({ x: 0, y: 0, width: 0 });
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
+
+  const recentesArray = ['Item 1', 'Item 2', 'Item 3'];
+
+  const handlePositionChange = (x: number, y: number, width: number) => {
+      setRecentesPosition({ x, y, width });
+  };
+
+  const handleSelectRecent = (item: string) => {
+      const searchInput = document.getElementById("searchBar") as HTMLInputElement;
+      if (searchInput) {
+          searchInput.value = item;
+          searchInput.focus(); 
+          const event = new KeyboardEvent('keydown', { key: 'Enter' });
+          searchInput.dispatchEvent(event);
+      }
+  };
+
   return (
     <div className={styles.regrasContainer}>
-      <div>
-      </div>
+    <Header 
+        onPositionChange={handlePositionChange} 
+        onFocusChange={setIsSearchFocused}
+    />
       <main className={styles.containerRegras}>
         <h1 className={styles.title}>Regras e Políticas</h1>
 
@@ -58,7 +82,8 @@ function Regras() {
           Todo o conteúdo disponível no site, incluindo textos, imagens e gráficos, é protegido por direitos autorais e outras leis de propriedade intelectual. Nenhum material do site pode ser copiado, reproduzido ou distribuído sem a devida autorização.
         </p>
       </main>
-    </div>
+      {isSearchFocused && <Recentes position={recentesPosition} recentes={recentesArray} onSelect={handleSelectRecent} />}
+  </div>
   );
 }
 

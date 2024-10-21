@@ -1,16 +1,4 @@
 
-.sidebar {
-  display: none; /* Oculta a barra lateral */
-  transition: display 0.3s ease; /* Suaviza a transição de exibição */
-}
-
-
-
-.left, .right {
-  display: flex;
-  transition: all 0.3s ease; /* Transição suave para mudanças em todos os estilos */
-}
-
 
 .headerText {
   text-decoration: none;
@@ -33,77 +21,16 @@
   transition: all 0.3s ease; /* Transição suave para alterações na barra de pesquisa */
 } 
 
-.formi {
-  padding-right: 5px;
-  transition: padding-right 0.3s ease; /* Suaviza a transição do padding */
-}
 
 .hiader {
   width: 90%;
   margin: auto;
   transition: width 0.3s ease, margin 0.3s ease; /* Suaviza a transição da largura e da margem */
 }
-.secondary-nav>ul>li>a{
-  height: 20px;
-  text-align: center;
-  background-color: red;
-  color: aliceblue;
-}
 .mini {
   display: none;
 }
-.alinhador{
-  margin: auto;
-  width: 85%;
-  display: flex;
-  justify-content: space-around;
-}
-.d-block {
-  display: block;
-}
 
-.d-none {
-  display: none;
-}
-
-.secondary-nav {
-  background-color: rgba(230, 230, 230, 0.795); /* Ajuste a transparência conforme necessário */
-  position: absolute; /* Para sobrepor o conteúdo do page */
-  width: 100%; /* Para ocupar toda a largura */
-  top: 100%; /* Posiciona logo abaixo do header */
-  left: 0;
-  z-index: 1000; /* Para garantir que fique acima de outros elementos */
-}
-
-
-@media (min-width: 600px) and (max-width: 991.98px) {
-  .normal {
-    display: none;
-  }
-  .mini {
-    display: flex;
-  }
-  .menu-icon{display: none;}
-}
-
-@media (max-width: 599.98px) {
-  .normal {
-    display: none;
-  }
-  .mini {
-    display: flex;
-  }
-  .perfil{display: none;}
-}
-
-@media (min-width: 992px) {
-  .normal {
-    display: flex; 
-  }
-  .mini {
-    display: none;
-  }
-}
 .header-container {
   box-shadow: 0 0.001px 10px rgba(0, 0, 0, 0.89);
   background-color: white;
@@ -135,8 +62,49 @@
   background-color: rgba(255, 0, 0, 0.226);
 }
 
-@media (max-width: 490px) {
+
+/* /////////////////////////////////// */
+/* /////////////////////////////////// */
+/* /////////////////////////////////// */
+
+@media (min-width: 992px) {
+  .textinho{
+    display: none;
+  }
+}
+@media (min-width: 600px) and (max-width: 991.98px) {
+  .mr-auto{
+    display: none;
+  }
+  .textinho{
+    display: none;
+  }
+}
+@media (max-width: 610px) and (min-width: 490px) {
+  .containerr{
+    flex-direction: column;
+  }
+  .texto{
+    display: none;
+  }
+  .mr-auto{
+    display: none;
+  }
+  .menu{
+    display: flex;
+  }
+}
+@media (max-width: 490px) and (min-width: 320px) {
+  .mr-auto{
+    display: none;
+  }
   .hiader{width: 100%;}
-  .alinhador{width: 97vw;}
+  .containerr{
+    flex-direction: column;
+  }
   .navbar-brand{margin: 0px; padding: 0 0 0 5px; width: 19vw;}
 }
+
+/* /////////////////////////////////// */
+/* /////////////////////////////////// */
+/* /////////////////////////////////// */

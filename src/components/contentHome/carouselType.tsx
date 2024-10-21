@@ -14,10 +14,13 @@ const CarouselType: React.FC<CarouselProps> = ({ images, imagesToShow = 3 }) => 
   const updateCoiso = () => {
     const width = window.innerWidth;
     if (width > 1537) {
+      setCoisa(4);
       setCoiso(76.5);
     } else if (width >= 1189 && width <= 1536) {
+      setCoisa(4);
       setCoiso(76.5);
     } else if (width >= 992 && width <= 1190) {
+      setCoisa(4);
       setCoiso(76.5);
     } else {
       setCoisa(3);
@@ -37,7 +40,7 @@ const CarouselType: React.FC<CarouselProps> = ({ images, imagesToShow = 3 }) => 
   // Função para mostrar próxima imagem
   const nextImage = () => {
     setCurrentIndex((prevIndex) => 
-      Math.min(prevIndex + 1, images.length - coisa) // Limita o índice para não exceder o número de imagens
+      Math.min(prevIndex + 1, images.length - coisa)
     );
   };
 

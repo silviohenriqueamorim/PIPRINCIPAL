@@ -1,0 +1,21 @@
+
+/* Oculta a barra de rolagem em toda a página */
+.headerContainerhome{
+    overflow: hidden; /* Oculta a barra de rolagem */
+  }
+  body{overflow: hidden;}
+  .homeContainerhome {
+    background-color: #ececec;
+    display: flex;
+    flex-direction: column; /* Organiza o Header e o ContentHome em coluna */
+    height: 100vh; /* Altura total da tela */
+}
+
+.contentContainerhome {
+    overflow-y: auto; /* Adiciona rolagem vertical */
+}
+
+
+.carroselContainerhome {
+    height: 0px;
+}

@@ -34,7 +34,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onPositionChange, onFocusChange }
       onFocus={() => onFocusChange(true)} // Define o foco como verdadeiro
       onBlur={() => onFocusChange(false)} // Define o foco como falso
     >
-      <input className="searchBar form-control w-100" type="text" placeholder="Search" id='searchBar'/>
+      <input className="searchBar form-control" type="text" placeholder="Search" id='searchBar'/>
     </form>
   );
 };

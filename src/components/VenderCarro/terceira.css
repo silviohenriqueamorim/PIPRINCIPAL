@@ -1,0 +1,82 @@
+/* Estilos gerais */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #dddddd;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container principal */
+.informacoes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 900px;
+  border-radius: 10px;
+}
+
+.titulo-pagina {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Container para os inputs de imagem (layout 3x3) */
+.input-imagens-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.input-imagem {
+  border: 2px dashed #7e7e7e;
+  width: 190px;
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.input-file {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.input-imagem::before {
+  content: "Adicionar";
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Botão final */
+.botao-etapa-final {
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.botao-etapa-final:hover {
+  background-color: #cc0000;
+}
